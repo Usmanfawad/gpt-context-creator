@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "gpt-context-creator"
+version = "0.1.0"
+description = "A utility script to streamline text aggregation from multiple project files into a single context file for seamless use with GPT models. Save time by automating the collection of context across multiple files."
+authors = ["Your Name ufawad0@gmail.com"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+black = "^24.4.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

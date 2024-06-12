@@ -2,6 +2,7 @@
 
 ## Overview
 
+Isn't it a PAIN IN THE A** writing down the whole context for GPT and then explaining what you WANT from it? Well...
 `gpt-context-creator` is a simple yet powerful script designed to help developers and content creators who frequently work with GPT models. This tool automates the process of gathering text from specified project files and consolidating it into a single output file. This file can then be used as context for GPT models, eliminating the need to manually copy and paste text each time.
 
 # GPT Context Creator
@@ -32,7 +33,7 @@ To get started with GPT Context Creator, follow these steps:
    ```bash
    poetry install
 
-3. **Usage**:
+3. **Usage (RUN THE main.py)**:
    ```bash
    poetry run python main.py
 

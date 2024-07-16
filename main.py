@@ -4,7 +4,8 @@ from pathlib import Path
 from file_iterator import iterate_files
 
 # Get the current working directory
-current_directory = Path.cwd()
+# current_directory = Path.cwd()
+current_directory = Path("/Users/apple/Documents/bleedai/chrome-ext")
 print(f"Current directory: {current_directory}")
 
 # Read directories to exclude from ignore.csv
@@ -15,7 +16,7 @@ with open("ignore.csv") as f:
 excluded_dirs = [current_directory / Path(dir.strip()) for dir in ignored_files]
 
 # Read user-defined files from files.csv (as strings)
-with open("files.csv") as f:
+with open(current_directory / "files.csv") as f:
     user_defined_files = f.read().split(",")
 
 # Trim whitespace and normalize user-defined file names
@@ -32,6 +33,7 @@ for file_path in iterate_files(current_directory, excluded_dirs):
 context_file_path = current_directory / "context.txt"
 context_file_path.write_text("")  # This will clear the file if it exists
 
+print(user_defined_files)
 # Iterate over all found files and check if they match the user-defined files
 for posix_file in all_files:
     # Check if any user-defined file name matches part of the posix_file name
